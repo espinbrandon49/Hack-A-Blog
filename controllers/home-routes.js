@@ -4,7 +4,6 @@ const { User, Blog, Comment } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
     const blogData = await Blog.findAll({});
 
     // Serialize data so the template can read it
@@ -21,9 +20,12 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// Use withAuth middleware to prevent access to route
 router.get('/dashboard', (req, res) => {
   res.render('dashboard')
+});
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 module.exports = router;
