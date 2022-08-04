@@ -1,10 +1,10 @@
 [
   {
-    "name": "Sally",
+    "username": "Sally",
     "password": "password123"
   },
   {
-    "name": "Brian",
+    "username": "Brian",
     "password": "password345"
   }
 ]

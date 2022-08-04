@@ -5,7 +5,6 @@ const { User, Blog, Comment } = require('../models');
 router.get('/', async (req, res) => {
   try {
     const blogData = await Blog.findAll({});
-
     // Serialize data so the template can read it
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
@@ -29,3 +28,19 @@ router.get('/signup', (req, res) => {
 });
 
 module.exports = router;
+
+//test create user
+// router.get('/', async (req, res) => {
+//   try {
+//     const userData = await User.findAll({});
+//     console.log(userData)
+//     ('JSDGRFVSEDBGFVPIBDSAUFGVA[DS;UJADS;FVU JUASDB')
+//     // Serialize data so the template can read it
+//     const users = userData.map((user) => user.get({ plain: true }));
+
+//     // Pass serialized data and session flag into template
+//     res.render('homepage', { users });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
