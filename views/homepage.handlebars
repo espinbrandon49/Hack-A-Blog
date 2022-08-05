@@ -1,9 +1,12 @@
-{{#each blogs}}
-<h2>ID: {{id}} {{title}}</h2> <span>CREATED: {{createdAt}}</span>
-<p>{{content}}</p>
+{{#each blogs as |blog| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <p>Created by ID:{{id}}, NAME: {{title}} on {{createdAt}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{content}}
+    </p>
+  </div>
+</div>
 {{/each}}
-
-{{!-- {{#each users}}
-<h2>USER ID: {{id}} USER NAME {{username}}</h2>
-<p>USER PASSWORD {{password}}</p>
-{{/each}} --}}
