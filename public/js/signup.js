@@ -5,7 +5,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (username && password) {
-console.log('red')
+
     const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
@@ -15,7 +15,7 @@ console.log('red')
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      console.log('redred')
+
       alert(response.statusText);
     }
   }
