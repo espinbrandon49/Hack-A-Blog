@@ -1,4 +1,3 @@
-console.log('meow')
 const loginFormHandler = async (event) => {
   event.preventDefault();
 

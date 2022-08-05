@@ -3,12 +3,14 @@ const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-
+    const userData = await User.create({
+      name: req.body.name,
+      username: req.body.username,
+      password: req.body.password
+    })
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
       res.status(200).json(userData);
     });
   } catch (err) {
@@ -57,6 +59,11 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
 
 module.exports = router;
 
