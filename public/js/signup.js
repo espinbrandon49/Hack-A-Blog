@@ -12,12 +12,11 @@ const signupFormHandler = async (event) => {
       body: JSON.stringify({ name, username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
+
     if (response.ok) {
-      console.log('success');
       document.location.replace('/dashboard');
     } else {
-      console.log('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-      alert(response.statusText);
+      console.log(response.statusText);
     }
   }
 };

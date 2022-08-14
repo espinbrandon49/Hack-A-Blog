@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{users.name}} {{user.name}} {{name}}!</h2>
+    <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 
@@ -23,14 +23,14 @@
     </form>
   </div>
 
-  {{!-- {{#if blogs.length}} --}}
+  {{#if blogs.length}}
   <div class="col-md-6 blog-list">
     <h3>Current Projects:</h3>
 
     {{#each blogs as |blog|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/blog/{{blog.id}}">{{blogs.title}}</a></h4>
+        <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
@@ -38,8 +38,8 @@
     </div>
     {{/each}}
   </div>
-  {{!-- {{/if}} --}}
-
+  {{/if}}
 </div>
 
-<script src="./js/dashboard.js"></script>
+<script src="./js/dashboard.js"></scriptimage.png
+
