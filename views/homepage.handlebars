@@ -1,11 +1,11 @@
 {{#each blogs as |blog| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
-    <p>ID:{{id}}, Title: {{title}} on {{createdAt}}</p>
+    <p>ID:{{user.name}}, Title: {{title}} on {{blog.createdAt}}</p>
   </div>
   <div class="col-md-7">
     <p>
-      Content: {{content}}
+      Contents: {{content}}
     </p>
   </div>
 </div>

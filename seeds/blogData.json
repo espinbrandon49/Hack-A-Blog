@@ -1,10 +1,12 @@
 [
   {
    "title": "Blog Title",
-   "content": "A lot of very important content"
+   "content": "A lot of very important content",
+   "user_id": 2
   }, 
   {
    "title": "Blog Title 2",
-   "content": "More important content to read"
+   "content": "More important content to read",
+   "user_id": 2
   }
  ]
