@@ -1,8 +1,8 @@
 const delButtonHandler = async (event) => {
-  console.log('meow')
   if (event.target.hasAttribute('data-id')) {
-    console.log('meow')
     const id = event.target.getAttribute('data-id');
+    console.log(id)
+    console.log(event.target)
     const response = await fetch(`/api/blogs/${id}`, {
       method: 'DELETE',
     });
@@ -10,7 +10,7 @@ const delButtonHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to delete project');
+      console.log('Failed to delete project');
     }
   }
 };
@@ -18,3 +18,4 @@ const delButtonHandler = async (event) => {
 document
   .querySelector('.new-blog-form')
   .addEventListener('click', delButtonHandler);
+
