@@ -46,10 +46,10 @@ X WHEN I click on the button to create a new blog post
 X THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
     WHEN I click on one of my existing posts in the dashboard
     THEN I am able to delete or update my post and taken back to an updated dashboard
-WHEN I click on the logout option in the navigation
-THEN I am signed out of the site
-    WHEN I am idle on the page for more than a set time
-    THEN I am automatically signed out of the site 
+X WHEN I click on the logout option in the navigation
+X THEN I am signed out of the site
+X WHEN I am idle on the page for more than a set time
+X THEN I am automatically signed out of the site 
 ```
 
 ## Mock-Up
