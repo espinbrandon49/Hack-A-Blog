@@ -2,13 +2,13 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 //signup
-router.get('/signup', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/dashboard');
-    return;
-  }
-  res.render('signup');
-});
+// router.get('/signup', (req, res) => {
+//   if (req.session.logged_in) {
+//     res.redirect('/dashboard');
+//     return;
+//   }
+//   res.render('signup');
+// });
 
 router.post('/', async (req, res) => {
   try {
