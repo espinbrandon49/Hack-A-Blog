@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-//signup
 // router.get('/signup', (req, res) => {
 //   if (req.session.logged_in) {
 //     res.redirect('/dashboard');
@@ -10,6 +9,7 @@ const { User } = require('../../models');
 //   res.render('signup');
 // });
 
+//signup
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
