@@ -1,12 +1,13 @@
-{{#each blogs as |blog| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <p>ID:{{user.name}}, Title: {{title}} on {{blog.createdAt}}</p>
+{{#each blogs as |blog|}}
+  <div class="row mb-4 project">
+
+    <div class="col-md-5">
+        <p><a href="/comment">{{title}}</a> created on {{format_date createdAt}} by {{user.username}}</p>
+        <p>
+          {{content}}
+        </p>
+      </div>
+    
+
   </div>
-  <div class="col-md-7">
-    <p>
-      Contents: {{content}}
-    </p>
-  </div>
-</div>
 {{/each}}

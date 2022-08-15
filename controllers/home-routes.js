@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['name', 'username'],
         },
       ],
     });
@@ -68,7 +68,7 @@ router.get('/blog/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['name', 'username'],
         },
       ],
     });
@@ -82,6 +82,14 @@ router.get('/blog/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/comment', (req, res) => {
+  if (req.session.logged_in) {
+    res.render('comment');
+    return;
+  }
+  res.render('login');
 });
 
 module.exports = router;
