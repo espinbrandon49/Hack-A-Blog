@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Blog, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// get all blogs
 router.get('/', async (req, res) => {
   try {
     const blogData = await Blog.findAll({
@@ -26,6 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
@@ -34,6 +36,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//signup
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -42,6 +45,7 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+//dashboard
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
@@ -62,6 +66,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+//get single blog
 router.get('/blog/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
@@ -84,6 +89,7 @@ router.get('/blog/:id', async (req, res) => {
   }
 });
 
+//get comment 
 router.get('/comment', (req, res) => {
   if (req.session.logged_in) {
     res.render('comment');
