@@ -2,7 +2,7 @@
 <div class="col-md-5">
   <p>Title: {{blog.title}} created on Date:(format_date) {{createdAt}} by Username: {{user.username}}</p>
   <p>
-    {{content}}
+    Content: {{content}}
   </p>
 </div>
 
@@ -17,5 +17,14 @@
     <button type="submit" class="btn btn-primary" data-id="{{id}}">Submit Comment</button>
   </div>
 </form>
+
+<div>
+  Comments live here
+  {{#each Comment}}
+  <h3>comment</h3>
+  Name: {{user.name}} on Date Created: {{user.createdAt}}
+  Comment content: {{comment}}
+  {{/each}}
+</div>
 
 <script src="/js/comment.js"></script>
