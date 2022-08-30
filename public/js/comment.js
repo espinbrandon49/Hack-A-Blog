@@ -23,6 +23,26 @@ const newCommentHandler = async (event) => {
   }
 };
 
+const delButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-Id')) {
+    const id = event.target.getAttribute('data-Id');
+
+    const response = await fetch(`/api/comments/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.reload();
+    } else {
+      console.log('Failed to delete project');
+    }
+  }
+};
+
 document
   .querySelector('.new-comment-form')
   .addEventListener('click', newCommentHandler);
+
+document
+  .querySelector('.commentDiv')
+  .addEventListener('click', delButtonHandler);

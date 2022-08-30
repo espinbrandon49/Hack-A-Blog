@@ -2,7 +2,8 @@
 <div class="col-md-5">
   <p>Title {{id}}: {{title}} created on Date:{{format_date createdAt}} by Username: {{user.name}}</p>
   <p>
-    Content: {{content}}
+    Content:
+    {{content}}
   </p>
 </div>
 
@@ -19,12 +20,19 @@
 </form>
 
 <div>
-  Comments live here
-  {{#each comments}}
   <h3>comment</h3>
-  Name: {{id}} on Date Created {{createdAt}}
-  Comment content: {{comment}}
-  <button>delete comment</button>
+  {{#each comments}}
+
+    <div class="commentDiv" >
+      Name:
+      {{id}}
+      on Date Created
+      {{createdAt}}
+      Comment content:
+      {{comment}}
+      <button data-id={{id}}>delete comment</button>
+    </div>
+
   {{/each}}
 </div>
 
