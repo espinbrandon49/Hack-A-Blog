@@ -117,9 +117,31 @@ router.get('/blog/comment/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['id', 'comment', 'blog_id', 'user_id', 'created_at']
+          attributes: ['id', 'comment', 'blog_id', 'user_id', 'createdAt'],
+          include: {
+            model: User,
+            attributes:['username']
+          }
         }
-      ],
+      ]
+    // const blogData = await Blog.findOne({
+    //   where: {
+    //     id: req.params.id
+    //   },
+    //   include: [
+    //     {
+    //       model: User,
+    //       attributes: ['username'],
+    //     },
+    //     {
+    //       model: Comment,
+    //       attributes: ['id', 'comment', 'blog_id', 'user_id', 'createdAt'],
+    //       include: {
+    //         model: User,
+    //         attributes:['username']
+    //       }
+    //     }
+    //   ]
     });
 
     const blog = blogData.get({ plain: true });

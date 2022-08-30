@@ -37,3 +37,5 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server listening on: http://localhost:${PORT}`));
 });
+
+// comment page, if logged in, should nav should say logout

@@ -18,38 +18,38 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 ```md
 GIVEN a CMS-style blog site 
-X WHEN I visit the site for the first time
-X THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
-X WHEN I click on the homepage option
-X THEN I am taken to the homepage
-X WHEN I click on any other links in the navigation
-X THEN I am prompted to either sign up or sign in
-X WHEN I choose to sign up
-X THEN I am prompted to create a username and password
-X WHEN I click on the sign-up button
-X THEN my user credentials are saved and I am logged into the site
-X WHEN I revisit the site at a later time and choose to sign in
-X THEN I am prompted to enter my username and password
-X WHEN I am signed in to the site
-X THEN I see navigation links for the homepage, the dashboard, and the option to log out
-X WHEN I click on the homepage option in the navigation
-X THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
-    WHEN I click on an existing blog post
-    THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
+Y WHEN I visit the site for the first time
+Y THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
+Y WHEN I click on the homepage option
+Y THEN I am taken to the homepage
+Y WHEN I click on any other links in the navigation
+Y THEN I am prompted to either sign up or sign in
+Y WHEN I choose to sign up
+Y THEN I am prompted to create a username and password
+Y WHEN I click on the sign-up button
+Y THEN my user credentials are saved and I am logged into the site
+Y WHEN I revisit the site at a later time and choose to sign in
+Y THEN I am prompted to enter my username and password
+Y WHEN I am signed in to the site
+Y THEN I see navigation links for the homepage, the dashboard, and the option to log out
+Y WHEN I click on the homepage option in the navigation
+Y THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
+Y WHEN I click on an existing blog post
+Y THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
     WHEN I enter a comment and click on the submit button while signed in
     THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
-X WHEN I click on the dashboard option in the navigation
-X THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
-X WHEN I click on the button to add a new blog post
-X THEN I am prompted to enter both a title and contents for my blog post
-X WHEN I click on the button to create a new blog post
-X THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
-X WHEN I click on one of my existing posts in the dashboard
-X THEN I am able to delete or update my post and taken back to an updated dashboard
-X WHEN I click on the logout option in the navigation
-X THEN I am signed out of the site
-X WHEN I am idle on the page for more than a set time
-X THEN I am automatically signed out of the site 
+Y WHEN I click on the dashboard option in the navigation
+Y THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
+Y WHEN I click on the button to add a new blog post
+Y THEN I am prompted to enter both a title and contents for my blog post
+Y WHEN I click on the button to create a new blog post
+Y THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
+Y WHEN I click on one of my existing posts in the dashboard
+Y THEN I am able to delete or update my post and taken back to an updated dashboard
+Y WHEN I click on the logout option in the navigation
+Y THEN I am signed out of the site
+Y WHEN I am idle on the page for more than a set time
+Y THEN I am automatically signed out of the site 
 ```
 
 ## Mock-Up

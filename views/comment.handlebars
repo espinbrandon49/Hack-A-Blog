@@ -1,6 +1,6 @@
 {{! single blog that was clicked on }}
 <div class="col-md-5">
-  <p>Title {{id}}: {{title}} created on Date:{{format_date createdAt}} by Username: {{user.name}}</p>
+  <p>Title {{id}}: {{title}} created on Date:{{format_date createdAt}} by Username: {{user.username}}</p>
   <p>
     Content:
     {{content}}
@@ -20,19 +20,18 @@
 </form>
 
 <div>
-  <h3>comment</h3>
+  <h3>comment</h3> 
   {{#each comments}}
-
     <div class="commentDiv" >
       Name:
+      {{user.username}}
       {{id}}
       on Date Created
-      {{createdAt}}
+      {{format_date createdAt}}
       Comment content:
       {{comment}}
-      <button data-id={{id}}>delete comment</button>
+      {{!-- <button data-id={{id}}>delete comment</button> --}}
     </div>
-
   {{/each}}
 </div>
 
