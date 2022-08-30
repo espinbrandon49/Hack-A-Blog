@@ -13,8 +13,6 @@ const newCommentHandler = async (event) => {
       },
     });
 
-
-
     if (response.ok) {
       // document.location.reload();
       console.log(comment)
