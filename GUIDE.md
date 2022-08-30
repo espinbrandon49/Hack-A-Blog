@@ -51,7 +51,7 @@ Y THEN I am signed out of the site
 Y WHEN I am idle on the page for more than a set time
 Y THEN I am automatically signed out of the site 
 ```
-
+all done
 ## Mock-Up
 
 The following animation demonstrates the application functionality:
