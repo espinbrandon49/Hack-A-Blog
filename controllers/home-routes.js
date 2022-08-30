@@ -117,16 +117,21 @@ router.get('/blog/comment/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['id', 'comment', 'blog_id', 'user_id', 'created_at']
+          attributes: ['id', 'comment', 'blog_id', 'user_id', 'createdAt'],
+          include: {
+            model: User,
+            attributes:['username']
+          }
         }
-      ],
+      ]
     });
 
     const blog = blogData.get({ plain: true });
 
     if (req.session.logged_in) {
       res.render('comment', {
-        ...blog
+        ...blog,
+        logged_in: req.session.logged_in
       })
 
     } else {
