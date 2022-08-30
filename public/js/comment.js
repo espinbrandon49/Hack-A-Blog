@@ -13,10 +13,8 @@ const newCommentHandler = async (event) => {
       },
     });
 
-
-
     if (response.ok) {
-      // document.location.reload();
+      document.location.reload();
       console.log(comment)
       console.log(blog_id)
     } else {

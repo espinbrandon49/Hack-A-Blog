@@ -20,10 +20,11 @@
 
 <div>
   Comments live here
-  {{#each Comment}}
+  {{#each comments}}
   <h3>comment</h3>
-  Name: {{user.name}} on Date Created: {{user.createdAt}}
+  Name: {{id}} on Date Created {{createdAt}}
   Comment content: {{comment}}
+  <button>delete comment</button>
   {{/each}}
 </div>
 
