@@ -2,9 +2,12 @@ async function editFormHandler(event) {
 
   const title = document.querySelector('#updateTitle').value;
   const content = document.querySelector('#updateContent').value;
+  
   console.log(title, content)
+
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
+    
     const response = await fetch(`/api/blogs/${id}`, {
       method: 'PUT',
       body: JSON.stringify({ title, content }),

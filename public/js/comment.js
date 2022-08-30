@@ -7,15 +7,18 @@ const newCommentHandler = async (event) => {
   if (comment) {
     const response = await fetch(`/api/comments`, {
       method: 'POST',
-      body: JSON.stringify({ comment }),
+      body: JSON.stringify({ blog_id, comment }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
+    console.log(comment)
+    console.log(blog_id)
+
     if (response.ok) {
-      // document.location.replace('/');
-      console.log(response)
+      document.location.reload();
+      
     } else {
       alert('Failed to submit comment');
     }

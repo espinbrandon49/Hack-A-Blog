@@ -98,7 +98,7 @@ router.get('/blog/dashboard/:id', async (req, res) => {
 });
 
 //get comment 
-router.get('/comment', (req, res) => {
+router.get('/blog/comment/:id', (req, res) => {
   if (req.session.logged_in) {
     res.render('comment');
     return;
