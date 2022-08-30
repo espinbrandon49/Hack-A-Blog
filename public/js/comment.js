@@ -13,12 +13,12 @@ const newCommentHandler = async (event) => {
       },
     });
 
-    console.log(comment)
-    console.log(blog_id)
+
 
     if (response.ok) {
-      document.location.reload();
-      
+      // document.location.reload();
+      console.log(comment)
+      console.log(blog_id)
     } else {
       alert('Failed to submit comment');
     }

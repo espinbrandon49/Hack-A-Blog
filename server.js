@@ -37,5 +37,3 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Server listening on: http://localhost:${PORT}`));
 });
-
-//update model names to uppercase name

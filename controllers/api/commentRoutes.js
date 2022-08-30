@@ -12,20 +12,19 @@ router.get('/', (req, res) => {
     })
 })
 
-//Post a comment
+// Post a comment
 router.post('/', withAuth, async (req, res) => {
-  if (req.session) {
-    Comment.create({
-      comment: req.body.comment,
-      blog_Id: req.body.blog_Id,
-    })
-      .then(dbCommentData => res.json(dbCommentData))
-      .catch(err => {
-        console.log(err)
-        res.status(400).json(err)
-      })
+  try {
+    const newComment = await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+    res.status(200).json(newComment);
+  } catch (err) {
+    res.status(400).json(err);
   }
 });
+
 
 //delete a comment
 router.delete('/:id', withAuth, async (req, res) => {

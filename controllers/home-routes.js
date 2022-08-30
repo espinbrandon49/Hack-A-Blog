@@ -22,16 +22,16 @@ router.get('/', async (req, res) => {
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      blogs, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      blogs,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-//login
+// login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
@@ -40,7 +40,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-//signup
+// signup
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -49,8 +49,7 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-//dashboard
-// Use withAuth middleware to prevent access to route
+// dashboard
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -70,7 +69,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-//get single blog
+//get single blog from dashboard
 router.get('/blog/dashboard/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
@@ -97,13 +96,36 @@ router.get('/blog/dashboard/:id', async (req, res) => {
   }
 });
 
-//get comment 
-router.get('/blog/comment/:id', (req, res) => {
-  if (req.session.logged_in) {
-    res.render('comment');
-    return;
+// get a single blog and comment from homepage 
+router.get('/blog/comment/:id', async (req, res) => {
+  try {
+    const blogData = await Blog.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'username'],
+        },
+        {
+          model: Comment,
+          attributes: ['id', 'comment', 'blog_id', 'user_id', 'created_at']
+        }
+      ],
+    });
+
+    const blog = blogData.get({ plain: true });
+
+    if (req.session.logged_in) {
+      res.render('comment', {
+        ...blog,
+      })
+
+    } else {
+      res.render('login')
+      return
+    }
+  } catch (err) {
+    res.status(500).json(err);
   }
-  res.render('login');
 });
 
 module.exports = router;
