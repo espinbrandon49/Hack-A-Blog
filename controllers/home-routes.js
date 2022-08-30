@@ -79,7 +79,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-//get single blog from dashboard
+//get single blog from dashboard to update blog
 router.get('/blog/dashboard/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
@@ -106,7 +106,7 @@ router.get('/blog/dashboard/:id', async (req, res) => {
   }
 });
 
-// get a single blog and comment from homepage 
+// get a single blog from homepage to add a comment 
 router.get('/blog/comment/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
