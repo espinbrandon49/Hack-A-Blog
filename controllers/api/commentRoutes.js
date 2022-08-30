@@ -3,14 +3,14 @@ const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get comments
-router.get('/', (req, res) => {
-  Comment.findAll()
-    .then(commentData => res.json(commentData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err)
-    })
-})
+// router.get('/', (req, res) => {
+//   Comment.findAll()
+//     .then(commentData => res.json(commentData))
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err)
+//     })
+// })
 
 // Post a comment
 router.post('/', withAuth, async (req, res) => {

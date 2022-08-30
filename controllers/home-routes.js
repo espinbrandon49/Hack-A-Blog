@@ -31,6 +31,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+// get all comments
+router.get('/', async (req, res) => {
+  try {
+    const commentData = await Comment.findAll({
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -116,7 +126,7 @@ router.get('/blog/comment/:id', async (req, res) => {
 
     if (req.session.logged_in) {
       res.render('comment', {
-        ...blog,
+        ...blog
       })
 
     } else {

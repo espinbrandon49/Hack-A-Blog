@@ -20,11 +20,17 @@
 
 <div>
   Comments live here
-  {{#each Comment}}
+  {{#each comments}}
   <h3>comment</h3>
-  Name: {{user.name}} on Date Created: {{user.createdAt}}
+  Name: {{id}} on Date Created {{user.createdAt}}
   Comment content: {{comment}}
   {{/each}}
 </div>
+
+{{!-- <div>
+  <h3>Comments</h3>
+
+  Comment content: {{comment.comment}}{{comment}}{{Comment.id}}{{comment.blog_id}}{{comment.id}}
+</div> --}}
 
 <script src="/js/comment.js"></script>
