@@ -71,7 +71,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 });
 
 //get single blog
-router.get('/blog/:id', async (req, res) => {
+router.get('/blog/dashboard/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
       include: [
