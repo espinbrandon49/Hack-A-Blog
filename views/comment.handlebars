@@ -1,3 +1,10 @@
+<style>
+  .roundLeft {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    }
+</style>
+
 {{! single blog that was clicked on }}
 <div class="card mb-3">
       <div class="card-body">
@@ -9,41 +16,26 @@
       </div>
     </div>
 
-
-{{!-- <div>
-  <p>Title {{id}}: {{title}} created on Date:{{format_date createdAt}} by Username: {{user.username}}</p>
-  <p>
-    Content:
-    {{content}}
-  </p>
-</div> --}}
-
-{{! form to submit comment }}
-<form class="new-comment-form">
-  <div class="">
-    <label for="">Comment</label>
-    <textarea class="" type="text" id="comment" name="comment" placeholder="Comment here"></textarea>
+{{!-- comment input --}}
+<div class="input-group new-comment-form">
+  <div class="input-group-prepend">
+    <button type='submit' id="" class="roundLeft input-group-text h-100 btn btn-primary" data-id="{{id}}">Comment</button>
   </div>
+  <textarea class="form-control" aria-label="With textarea" id="comment" name="comment" placeholder="comment here"></textarea>
+</div>
 
-  <div class="form-group">
-    <button type="submit" class="" data-id="{{id}}">Submit Comment</button>
-  </div>
-</form>
-
-<div>
-  <h3>comment</h3> 
+{{!-- comments --}}
+<h3 class="mt-3">comments</h3> 
+<div class="list-group">
   {{#each comments}}
-    <div class="commentDiv" >
-      Name:
-      {{user.username}}
-      {{id}}
-      on Date Created
-      {{format_date createdAt}}
-      Comment content:
-      {{comment}}
-      {{!-- <button data-id={{id}}>delete comment</button> --}}
+  <div class="list-group-item list-group-item-action flex-column align-items-start ">
+    <div class="d-flex w-100 justify-content-between">
+      <p class="mb-1">{{comment}}</p>
+      <small>{{format_date createdAt}}</small>
     </div>
-  {{/each}}
+    <small>-{{user.username}}</small>
+  </div>
+    {{/each}}
 </div>
 
 <script src="/js/comment.js"></script>
