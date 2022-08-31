@@ -1,5 +1,5 @@
 {{! single blog that was clicked on }}
-<div class="col-md-5">
+<div>
   <p>Title {{id}}: {{title}} created on Date:{{format_date createdAt}} by Username: {{user.username}}</p>
   <p>
     Content:
@@ -8,14 +8,14 @@
 </div>
 
 {{! form to submit comment }}
-<form class="form new-comment-form">
-  <div class="form-group">
-    <label for="comment">Comment</label>
-    <textarea class="form-input" type="text" id="comment" name="comment" placeholder="Comment here"></textarea>
+<form class="new-comment-form">
+  <div class="">
+    <label for="">Comment</label>
+    <textarea class="" type="text" id="comment" name="comment" placeholder="Comment here"></textarea>
   </div>
 
   <div class="form-group">
-    <button type="submit" class="btn btn-primary" data-id="{{id}}">Submit Comment</button>
+    <button type="submit" class="" data-id="{{id}}">Submit Comment</button>
   </div>
 </form>
 
