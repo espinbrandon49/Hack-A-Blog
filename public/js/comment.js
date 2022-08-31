@@ -15,35 +15,12 @@ const newCommentHandler = async (event) => {
 
     if (response.ok) {
       document.location.reload();
-      console.log(comment)
-      console.log(blog_id)
     } else {
       alert('Failed to submit comment');
     }
   }
 };
 
-// const delButtonHandler = async (event) => {
-//   if (event.target.hasAttribute('data-Id')) {
-//     const id = event.target.getAttribute('data-Id');
-
-//     const response = await fetch(`/api/comments/${id}`, {
-//       method: 'DELETE',
-//     });
-// console.log(id + 'meow')
-//     if (response.ok) {
-//       //document.location.reload();
-//       console.log(id)
-//     } else {
-//       console.log('Failed to delete project');
-//     }
-//   }
-// };
-
 document
   .querySelector('.new-comment-form')
   .addEventListener('click', newCommentHandler);
-
-// document
-//   .querySelector('.commentDiv')
-//   .addEventListener('click', delButtonHandler);
