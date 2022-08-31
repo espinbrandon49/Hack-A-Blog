@@ -1,42 +1,46 @@
-<div class="">
-  <div class="">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
+<style>
+  .roundLeft {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
-<div class="">
-  <div class="">
-    <h3>Blog:</h3>
+  .link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+    color: inherit; text-decoration: inherit; 
+  }
+</style>
 
-    <form class="new-blog-form">
-      <div class="">
-        <label for="title">title:</label>
-        <input class="" type="text" id="title" name="title" />
-      </div>
-      <div class="">
-        <label for="content">content:</label>
-        <textarea class="" id="content" name="content"></textarea>
-      </div>
-      <div class="">
-        <button type="submit" class="">Submit</button>
-      </div>
-    </form>
-  </div>
+<h2 class="mb-3">Welcome, {{name}}!</h2>
 
-  {{#if blogs.length}}
-  <div class="">
-    <h3>Current Projects:</h3>
-
-    {{#each blogs as |blog|}}
-    <div class="">
-      <div class="">
-        <h4><a href="/blog/dashboard/{{blog.id}}">{{blog.title}}</a></h4>
-      </div>
+<h6>Your thoughts:</h6>
+<form class="new-blog-form">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text roundLeft" id="inputGroup-sizing-default">Title</span>
     </div>
+    <input type="text" id="title" name="title" class="form-control" aria-label="title" aria-describedby="title">
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+      <textarea class="form-control" id="content" rows="12" name="content"></textarea>
+  </div>
+    <button type="submit" class="btn btn-primary mb-3">Publish</button>
+</form>
+
+{{#if blogs.length}}
+<h3>Blogs</h3> 
+  <div class="list-group">
+    {{#each blogs as |blog|}}
+      <div class="list-group-item list-group-item-action flex-column align-items-start ">
+        <a href="/blog/dashboard/{{blog.id}}" class="link-unstyled">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{blog.title}}</h5>
+          <small>{{format_date createdAt}}</small>
+        </div>
+        </a>
+      </div>
     {{/each}}
   </div>
-  {{/if}}
-</div>
+{{/if}}
 
 <script src="./js/dashboard.js"></script
 

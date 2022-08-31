@@ -1,13 +1,25 @@
+<style>
+  .link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+     color: inherit; text-decoration: inherit; 
+     }
+     .card:hover {
+      background-color: #f8f9fa;
+     }
+      .card:hover:active {
+      background-color: #e9ecef;
+     }
+</style>
+
 {{#each blogs as |blog|}}
-  <div class="">
-
-    <div class="">
-      <p><a href="/blog/comment/{{id}}">{{title}}</a> created on {{format_date createdAt}} by {{user.username}}</p>
-      <p>
-        {{content}}
-      </p>
+  <a href="/blog/comment/{{id}}" class="link-unstyled " >
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="d-flex justify-content-between ">
+          <h5 class="card-title">{{title}}</h5>
+          <h6 class="card-subtitle mb-1 text-muted d-flex align-items-center">Posted by: {{user.username}} on {{format_date createdAt}}</h6>
+        </div>
+        <p class="card-text">{{content}}</p>
+      </div>
     </div>
-
-  </div>
+  </a>
 {{/each}}
-
