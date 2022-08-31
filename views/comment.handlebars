@@ -1,11 +1,22 @@
 {{! single blog that was clicked on }}
-<div>
+<div class="card mb-3">
+      <div class="card-body">
+        <div class="d-flex justify-content-between"">
+          <h5 class="card-title">{{title}}</h5>
+          <h6 class="card-subtitle mb-1 text-muted d-flex align-items-center">Posted by: {{user.username}} on {{format_date createdAt}}</h6>
+        </div>
+        <p class="card-text">{{content}}</p>
+      </div>
+    </div>
+
+
+{{!-- <div>
   <p>Title {{id}}: {{title}} created on Date:{{format_date createdAt}} by Username: {{user.username}}</p>
   <p>
     Content:
     {{content}}
   </p>
-</div>
+</div> --}}
 
 {{! form to submit comment }}
 <form class="new-comment-form">
