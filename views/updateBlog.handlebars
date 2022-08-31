@@ -8,47 +8,19 @@
 <h6>Your updates:</h6>
 <form class="edit-blog-form">
   <div class="input-group mb-3">
-
     <div class="input-group-prepend">
       <span class="input-group-text roundLeft" id="inputGroup-sizing-default">Title</span>
     </div>
-
     <input type="text" id="updateTitle" name="updateTitle" class="form-control" aria-label="updateTitle" aria-describedby="updateTitle" value="{{title}}">
-
   </div>
-
   <div class="form-group">
-
     <label for="updateContent">Content</label>
-
     <textarea class="form-control" id="updateContent" rows="12" name="updateContent">{{content}}</textarea>
-
   </div>
-
   <div class="btn-group " role="group" aria-label="Basic example">
     <button type="submit" data-id="{{id}}" class="btn btn-primary">Update</button>
     <button type="button" data-delId="{{id}}" class="btn btn-danger">Delete</button>
   </div>
 </form>    
     
-{{!--     
-    <form class="edit-blog-form">
-      
-      <div class="">
-        <label for="updateTitle">Title</label>
-        <input class="" type="text" id="updateTitle" name="updateTitle" value="{{title}}"/>  
-      </div>
-      
-      <div class="">
-        <label for="updateContent">Content</label>
-        <textarea class="" type="text" id="updateContent" name="updateContent">{{content}}</textarea>
-      </div>
-
-      <div class="">
-        <button type="submit" class="" data-id="{{id}}">Update Post</button>
-        <button class="" data-delId="{{id}}">Delete</button>
-      </div>
-    </form>
-  </div> --}}
-
 <script src="/js/updateBlog.js"></script>

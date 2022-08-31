@@ -18,34 +18,34 @@ const runTimer = () => {
     logout()
   }, 60000)
 }
-//runTimer();
+runTimer();
 
 function resetLogout() {
   clearTimeout(myTimeout)
 }
 
-// window.addEventListener('click', (e) => {
-//   clearTimeout(timer)
-//   runTimer()
-// })
+window.addEventListener('click', (e) => {
+  clearTimeout(timer)
+  runTimer()
+})
 
-// window.addEventListener('mousemove', (e) => {
-//   clearTimeout(timer)
-//   runTimer()
-// })
+window.addEventListener('mousemove', (e) => {
+  clearTimeout(timer)
+  runTimer()
+})
 
-// window.addEventListener('scroll', (e) => {
-//   clearTimeout(timer)
-//   runTimer()
-// })
+window.addEventListener('scroll', (e) => {
+  clearTimeout(timer)
+  runTimer()
+})
 
-// window.addEventListener('keydown', (e) => {
-//   clearTimeout(timer)
-//   runTimer()
-// })
+window.addEventListener('keydown', (e) => {
+  clearTimeout(timer)
+  runTimer()
+})
 
-// window.addEventListener('keyup', (e) => {
-//   clearTimeout(timer)
-//   runTimer()
-// })
+window.addEventListener('keyup', (e) => {
+  clearTimeout(timer)
+  runTimer()
+})
 document.querySelector('#logout').addEventListener('click', logout);
