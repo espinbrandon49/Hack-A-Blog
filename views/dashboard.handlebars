@@ -13,17 +13,29 @@
 
 <h6>Your thoughts:</h6>
 <form class="new-blog-form">
-  <div class="input-group mb-3">
+  {{!-- <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text roundLeft" id="inputGroup-sizing-default">Title</span>
     </div>
     <input type="text" id="title" name="title" class="form-control" aria-label="title" aria-describedby="title">
-  </div>
+  </div> --}}
+
+<div class="form-floating mb-3">
+  <input type="text" id="title" name="title" class="form-control" placeholder="descriptive title">
+  <label for="title">Blog Title</label>
+</div>
+
   <div class="form-group">
-    <label for="content">Content</label>
-      <textarea class="form-control" id="content" rows="12" name="content"></textarea>
+    <label for="content"></label>
+      <textarea class="form-control mb-1" id="content" rows="12" name="content"></textarea>
   </div>
-    <button type="submit" class="btn btn-primary mb-3">Publish</button>
+
+{{!-- <div class="form-floating">
+  <textarea class="form-control" placeholder="Never start a blog with a question" id="content" name="content" rows="12"></textarea>
+  <label for="content">Content</label>
+</div> --}}
+
+    <button type="submit" class="btn btn-primary">Publish</button>
 </form>
 
 {{#if blogs.length}}

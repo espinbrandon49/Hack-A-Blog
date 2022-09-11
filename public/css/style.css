@@ -1,0 +1,14 @@
+* {
+  color: #222;
+}
+body {
+  background-color: #f4f2e7;
+}
+
+.navbar {
+  background-color: #222;
+}
+
+a {
+  color: #f4f2e7 !important;
+}
