@@ -12,7 +12,6 @@ html {
 
 * {
   color: var(--main-dark-color);
-
 }
 
 body {
@@ -49,4 +48,8 @@ h3 {
 
 #signupBtn:hover {
   color: var(--main-light-color) !important;
+}
+
+.singleTitle {
+  font-weight: 400;
 }
