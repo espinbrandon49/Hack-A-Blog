@@ -14,23 +14,23 @@
       <div >
         <header>
           <nav class="navbar mb-3">
-            <a class="navbar-brand" href="/">
+            <a class="display-4 a-nav" href="/">
 
               Hack-A-Blog</a>
             <ul class="nav justify-content-end">
               <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link a-nav" href="/">Home</a>
               </li>
               <li>
-                <a class="nav-link" href="/dashboard">Dashboard</a>
+                <a class="nav-link a-nav" href="/dashboard">Dashboard</a>
               </li>
               {{#if logged_in}}
                 <li>
-                  <a class="nav-link" href="/" id="logout">Logout</a>
+                  <a class="nav-link a-nav" href="/" id="logout">Logout</a>
                 </li>
               {{else}}
                 <li>
-                  <a class="nav-link" href="/login">Login</a>
+                  <a class="nav-link a-nav" href="/login">Login</a>
                 </li>
               {{/if}}
             </ul>

@@ -1,26 +1,32 @@
 <style>
-  .roundLeft {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+  .roundLeft { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 </style>
 
-<h6>Your updates:</h6>
 <form class="edit-blog-form">
-  <div class="input-group mb-3">
+  <h3 class="display-6">Update-A-Blog</h3>
+
+  {{!-- <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text roundLeft" id="inputGroup-sizing-default">Title</span>
     </div>
     <input type="text" id="updateTitle" name="updateTitle" class="form-control" aria-label="updateTitle" aria-describedby="updateTitle" value="{{title}}">
+  </div> --}}
+
+  <div class="form-floating mb-3">
+    <input type="text" id="updateTitle" name="updateTitle" class="form-control" placeholder="Title" value="{{title}}" />
+    <label for="updateTitle">Update title</label>
   </div>
+
   <div class="form-group">
-    <label for="updateContent">Content</label>
-    <textarea class="form-control" id="updateContent" rows="12" name="updateContent">{{content}}</textarea>
+    <label for="updateContent"></label>
+    <textarea class="form-control mb-1" id="updateContent" rows="12" name="updateContent">{{content}}</textarea>
   </div>
-  <div class="btn-group " role="group" aria-label="Basic example">
-    <button type="submit" data-id="{{id}}" class="btn btn-primary">Update</button>
-    <button type="button" data-delId="{{id}}" class="btn btn-danger">Delete</button>
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="submit" data-id="{{id}}" class="btn btn-outline-primary btn-lg">Update</button>
+    <button type="button" data-delId="{{id}}" class="btn btn-outline-danger btn-lg">Delete</button>
   </div>
-</form>    
-    
+
+</form>
+
 <script src="/js/updateBlog.js"></script>

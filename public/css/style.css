@@ -19,22 +19,23 @@ body {
   background-color: var(--main-dark-color);
 }
 
-a {
-  color: var(--main-light-color) !important;
+.a-nav {
+  color: var(--main-light-color);
 }
 
-.card-subtitle {
-  color: var(--secondary-light-color)
+.card-subtitle, h6 {
+  font-weight: 100;
+  font-size: 0.75em !important;
 }
 
 h3 { 
   color: var(--secondary-light-color)
 }
-/* .list-group-item {
-  border-radius: 0 !important;
-} */
 
  .list-group-item {
   border-radius: 0.375rem !important;
-
 } 
+
+#signupBtn:hover {
+  color: var(--main-light-color) !important;
+}

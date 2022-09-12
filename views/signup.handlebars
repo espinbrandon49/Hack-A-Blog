@@ -1,23 +1,38 @@
-<h2 class="mb-3">Signup</h2>
+<h2 class="mb-3 display-2">Signup</h2>
 
 <form class="signup-form">
-  
-  <div class="form-group mb-3">
+
+  {{! <div class="form-group mb-3">
     <label for="name-signup">Name</label>
     <input type="text" class="form-control" id="name-signup" aria-describedby="name-signup" placeholder="Name" />
+  </div> }}
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="name-signup" placeholder="Name" />
+    <label for="name-signup">Name</label>
   </div>
 
-  <div class="form-group mb-3">
+  {{! <div class="form-group mb-3">
     <label for="user-signup">Username</label>
     <input type="text" class="form-control" id="user-signup" aria-describedby="user-signup" placeholder="Username" />
+  </div> }}
+
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="user-signup" placeholder="Username" />
+    <label for="user-signup">Username</label>
   </div>
 
-  <div class="form-group mb-3">
+  {{!-- <div class="form-group mb-3">
     <label for="password-signup">Password</label>
     <input type="password" class="form-control" id="password-signup" placeholder="Password" />
+  </div> --}}
+
+  <div class="form-floating mb-1">
+    <input type="password" class="form-control" id="password-signup" placeholder="Password" />
+    <label for="password-signup">Password</label>
   </div>
-  
-  <button type="submit" class="btn btn-primary my-3">Signup</button>
+
+  <button type="submit" class="btn btn-outline-primary btn-lg">Signup</button>
 
 </form>
 
