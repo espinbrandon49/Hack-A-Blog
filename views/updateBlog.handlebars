@@ -8,11 +8,11 @@
 
   <div class="form-group">
     <label for="updateContent"></label>
-    <textarea class="form-control mb-1" id="updateContent" rows="12" name="updateContent">{{content}}</textarea>
+    <textarea class="form-control mb-3" id="updateContent" rows="12" name="updateContent">{{content}}</textarea>
   </div>
 
-  <div class="btn-group" role="group" aria-label="Basic example">
-    <button type="submit" data-id="{{id}}" class="btn btn-outline-primary btn-lg">Update</button>
+  <div class="btn-group d-flex" role="group" aria-label="Basic example">
+    <button type="submit" data-id="{{id}}" class="btn btn-primary btn-lg">Update</button>
     <button type="button" data-delId="{{id}}" class="btn btn-outline-danger btn-lg">Delete</button>
   </div>
 

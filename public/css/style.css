@@ -8,6 +8,7 @@
 
 html {
   margin-bottom: 10px;
+  height: 100vh;
 }
 
 * {
@@ -16,6 +17,16 @@ html {
 
 body {
   background-color: var(--main-light-color);
+    /* Margin bottom by footer height */
+    
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
 }
 
 input,
