@@ -1,25 +1,29 @@
 <style>
-  .link-unstyled, .link-unstyled:link, .link-unstyled:hover {
-     color: inherit; text-decoration: inherit; 
-     }
-     .card:hover {
-      background-color: #f8f9fa;
-     }
-      .card:hover:active {
-      background-color: #e9ecef;
-     }
+  .link-unstyled, .link-unstyled:link, .link-unstyled:hover { color: inherit; text-decoration: inherit; } .card:hover { background-color: #f8f9fa; } .card:hover:active { background-color: #e9ecef; }
 </style>
 
-{{#each blogs as |blog|}}
-  <a href="/blog/comment/{{id}}" class="link-unstyled " >
-    <div class="card mb-3">
-      <div class="card-body">
-        <div class="d-flex justify-content-between ">
-          <h5 class="card-title display-6 ">{{title}}</h5>
-          <h6 class="card-subtitle mb-1 d-flex align-items-center text-muted">Posted by: {{user.username}} on {{format_date createdAt}}</h6>
+{{#if logged_in}}
+  {{#each blogs as |blog|}}
+    <a href="/blog/comment/{{id}}" class="link-unstyled">
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title display-6">{{title}}</h5>
+            <h6 class="card-subtitle mb-1 d-flex align-items-center text-muted">Posted by: {{user.username}} on {{format_date createdAt}}</h6>
+          </div>
+          <p class="card-text">{{content}}</p>
         </div>
-        <p class="card-text">{{content}}</p>
+        <p class="text-center"> <img class="talkBackImg" src="./blogIcon.png" />Click to talk-back</p>
       </div>
-    </div>
-  </a>
-{{/each}}
+      
+    </a>
+    {{else}}
+    <h2>Be the first to blog</h2>
+  {{/each}}
+{{else}}
+  <div class="d-flex flex-column align-items-center">
+    <p class="display-1 text-center">Login to start blogging!</p>
+    <img class="text-center m-3 w-75" src="./blogIcon.png" />
+    <a class="fs-3" href="/signup">sign up instead</a>
+  </div>
+{{/if}}

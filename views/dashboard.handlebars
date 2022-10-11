@@ -4,7 +4,7 @@
   }
 </style>
 
-<h2 class="mb-3 display-2">Welcome, {{name}}!</h2>
+<h2 class="mb-3 ">Welcome, {{name}}</h2>
 <div class="row">
 
 <form class="new-blog-form col">
@@ -17,26 +17,28 @@
 
   <div class="form-group">
     <label for="content"></label>
-      <textarea class="form-control mb-1" id="content" rows="12" name="content"></textarea>
+      <textarea class="form-control mb-3" id="content" rows="12" name="content"></textarea>
   </div>
-    <button type="submit" class="btn btn-outline-dark btn-lg">Publish</button>
+    <button type="submit" class="btn btn-outline-dark btn-lg w-100">Publish</button>
 </form>
 
 {{#if blogs.length}}
-
   <div class="list-group col">
     <h3 class="display-6">Blogs</h3> 
     {{#each blogs as |blog|}}
-      <div class="list-group-item list-group-item-action flex-column align-items-start mb-1">
+      <div class="list-group-item list-group-item-action flex-column align-items-start mb-3">
         <a href="/blog/dashboard/{{blog.id}}" class="link-unstyled">
         <div class="d-flex w-100 justify-content-between ">
           <h5 class="mb-1 singleTitle">{{blog.title}}</h5>
           <h6>{{format_date createdAt}}</h6>
         </div>
+        <p>Click To Edit</p>
         </a>
       </div>
     {{/each}}
   </div>
+  {{else}}
+  <div><p>No Blogs Yet</p></div>
 {{/if}}
 </div>
 <script src="./js/dashboard.js"></script

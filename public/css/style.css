@@ -11,7 +11,7 @@ html {
 }
 
 * {
-  color: var(--main-dark-color);
+  color: var(--main-dark-color) ;
 }
 
 body {
@@ -20,16 +20,16 @@ body {
 
 input,
 textarea,
-label {
+label, h2 {
   font-family: 'Lora', serif !important;
 }
 
 .navbar {
-  background-color: var(--main-dark-color);
+  background-color: var(--main-dark-color) ;
 }
 
-.a-nav {
-  color: var(--main-light-color);
+.a-nav:hover {
+  color: var(--secondary-light-color) !important;
 }
 
 .card-subtitle,
@@ -52,4 +52,8 @@ h3 {
 
 .singleTitle {
   font-weight: 400;
+}
+
+.talkBackImg {
+  width: 50px;
 }
