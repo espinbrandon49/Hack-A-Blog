@@ -6,27 +6,25 @@
   --secondary-light-color: #b4c4cb;
 }
 
-html {
-  margin-bottom: 10px;
-  height: 100vh;
-}
-
 * {
   color: var(--main-dark-color) ;
 }
 
-body {
-  background-color: var(--main-light-color);
-    /* Margin bottom by footer height */
-    
+html, body {
+  height: 100%;
 }
 
-.footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 30px;
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+.push {
+  height: 50px;
+}
+
+body {
+  background-color: var(--main-light-color);
 }
 
 input,
@@ -67,4 +65,15 @@ h3 {
 
 .talkBackImg {
   width: 50px;
+}
+
+.gitHubBtn:hover {
+  background-color: var(--secondary-light-color) !important;
+  border-color: #212529;
+}
+
+@media screen and (max-width: 992px) {
+  .publishBlogMedia {
+    width: 100% !important;
+  }
 }
