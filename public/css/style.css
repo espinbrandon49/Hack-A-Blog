@@ -12,6 +12,7 @@
 
 html, body {
   height: 100%;
+  background-color: var(--main-light-color);
 }
 
 body > footer {
@@ -25,10 +26,6 @@ body > footer {
 
 .push {
   height: 50px;
-}
-
-body {
-  background-color: var(--main-light-color);
 }
 
 input,
