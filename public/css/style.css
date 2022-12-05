@@ -73,6 +73,10 @@ h3 {
   border-color: #212529;
 }
 
+.formWidth {
+  max-width: 420px;
+}
+
 @media screen and (max-width: 992px) {
   .publishBlogMedia {
     width: 100% !important;
