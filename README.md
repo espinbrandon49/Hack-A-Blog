@@ -12,7 +12,7 @@ Tools:  JavaScript, Express-handlebars, MySQL2, Sequelize, Express.js, bcrypt, d
 [GitHub repository](https://github.com/espinbrandon49/hack-a-blog)
 
 ## Demo
-![demo video](./client/src/components/Header/so-pals-react.gif)
+https://user-images.githubusercontent.com/102924713/215344227-de2a644b-0f69-4173-a809-f817e817d2d1.mp4
 
 ## Table of Contents 
   * [Usage](#usage)
