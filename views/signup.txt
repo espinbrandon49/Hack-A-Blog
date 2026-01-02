@@ -1,0 +1,25 @@
+<div class="formWidth mx-auto">
+  <h2 class="mb-3">Signup</h2>
+
+  <form class="signup-form">
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="name-signup" placeholder="Name" />
+      <label for="name-signup">Name</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="user-signup" placeholder="Username" />
+      <label for="user-signup">Username</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="password-signup" placeholder="Password" />
+      <label for="password-signup">Password</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100 btn-lg">Signup</button>
+
+  </form>
+</div>
+<script src="./js/signup.js"></script>
