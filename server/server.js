@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const cors = require('cors');
 require('dotenv').config();
 
 const sequelize = require('./config/connection');
@@ -8,6 +9,13 @@ const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+app.use(
+  cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true,
+  })
+);
 
 const sess = {
   secret: process.env.SESSION_SECRET,
