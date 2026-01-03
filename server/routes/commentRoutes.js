@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Comment } = require('../models');
-const withAuth = require('../utils/auth');
+const withAuth = require('../middleware/auth');
 
 // create a comment (authed)
 router.post('/', withAuth, async (req, res) => {
