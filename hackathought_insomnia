@@ -1,0 +1,269 @@
+type: collection.insomnia.rest/5.0
+name: hackathought
+meta:
+  id: wrk_79df0ba7bc2047b5bcabde30868b8488
+  created: 1767400622096
+  modified: 1767400622096
+  description: ""
+collection:
+  - url: "{{base}}/blogs"
+    name: Dashboard - Create Blog A*
+    meta:
+      id: req_42dd66faf24343afbcd6cdc5b44583eb
+      created: 1767400644148
+      modified: 1767408803967
+      isPrivate: false
+      description: ""
+      sortKey: -1767400644148
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "title": "My Insomnia Blog",
+          "content": "Created during Phase 1 verification."
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base}}/comments"
+    name: Create Comment A*
+    meta:
+      id: req_25fb98b40d1e45b2972cca6c7ec1f824
+      created: 1767400649368
+      modified: 1767408774546
+      isPrivate: false
+      description: ""
+      sortKey: -1767400649368
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "comment": "This is a test comment from Insomnia",
+          "blog_id": 1
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base}}/blogs/1"
+    name: Blog Detail
+    meta:
+      id: req_aad2a42c04444f84835488bf716ab118
+      created: 1767400652817
+      modified: 1767401629514
+      isPrivate: false
+      description: ""
+      sortKey: -1767400652817
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base}}/blogs"
+    name: Blog Feed
+    meta:
+      id: req_f8847aafb7944c199ab905f3a522603d
+      created: 1767400655568
+      modified: 1767401591850
+      isPrivate: false
+      description: ""
+      sortKey: -1767400655568
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base}}/users/me"
+    name: Me (auth check)
+    meta:
+      id: req_424c1206f61942b19227ebd911b69b05
+      created: 1767400659596
+      modified: 1767401569556
+      isPrivate: false
+      description: ""
+      sortKey: -1767400659596
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base}}/users/login"
+    name: Login
+    meta:
+      id: req_7fb10d29f1394e1fb8835d379db33eb3
+      created: 1767400661700
+      modified: 1767408714074
+      isPrivate: false
+      description: ""
+      sortKey: -1767400661700
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "testuser123",
+          "password": "password123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base}}/users"
+    name: Signup
+    meta:
+      id: req_c55d0558ac4341b88a093955e78a9f71
+      created: 1767400663240
+      modified: 1767401990719
+      isPrivate: false
+      description: ""
+      sortKey: -1767400663240
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "name": "Test User",
+          "username": "testuser123",
+          "password": "password123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base}}/blogs/3"
+    name: Dashboard Update Blog O*
+    meta:
+      id: req_ed0d24caefca417a8e96f16c4eaadc1a
+      created: 1767401369729
+      modified: 1767408838203
+      isPrivate: false
+      description: ""
+      sortKey: -1767401369729
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "title": "Updated Insomnia Blog",
+          "content": "Updated content."
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base}}/blogs/3"
+    name: Dashboard - Delete Blog O*
+    meta:
+      id: req_ff70f82b1d914e229c687d3c85033982
+      created: 1767401399209
+      modified: 1767408875413
+      isPrivate: false
+      description: ""
+      sortKey: -1767401399209
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_44f4f9292650292d6bedf83ed5c17c1a2c88716f
+    created: 1767400622099
+    modified: 1767408685098
+  cookies:
+    - key: connect.sid
+      value: s%3AfH20jA7djn9XZgTnIBLU_MF7oE8zt2dr.2ZAek1x%2BI5cOyssVeUo3kzvrjJyebhTvvgdNl8O%2BbcU
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2026-01-03T02:51:25.098Z
+      lastAccessed: 2026-01-03T02:51:25.098Z
+      sameSite: lax
+      id: f164dc7b-7a9e-46a9-9a14-0b3f9854e751
+environments:
+  name: Base Environment
+  meta:
+    id: env_44f4f9292650292d6bedf83ed5c17c1a2c88716f
+    created: 1767400622098
+    modified: 1767400817430
+    isPrivate: false
+  data:
+    base: http://localhost:3001
